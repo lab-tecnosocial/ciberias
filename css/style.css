@@ -1,7 +1,78 @@
-.intro {
+/* General */
+
+body {
     background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+:root {
+    --color-primary: #71E4DD;
+}
+
+@font-face {
+    font-family: obveron;
+    src: url(fonts/ObveronFont.ttf) format('truetype');
+}
+
+/* Intro */
+
+.intro {
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
+    gap: 0px;
 }
+
+.title {
+    font-family: obveron;
+    font-size: 10rem;
+    text-shadow: 10px 6px 0px var(--color-primary),
+    9px 5px 30px var(--color-primary);
+    color: black;
+    /* color: white; */
+    animation: glitch-1 725ms infinite;
+    margin: 0;
+}
+
+.subtitle {
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+
+@keyframes glitch-1 {
+    0% {
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    15% {
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    16% {
+      text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.05em -0.05em 0 #fffc00;
+
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.05em -0.05em 0 #fffc00;
+    }
+    50% {
+      text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    99% {
+      text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    100% {
+      text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+        -0.04em -0.025em 0 #fffc00;
+    }
+  }
